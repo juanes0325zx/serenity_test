@@ -6,11 +6,13 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import starter.search.repositorio.task.login_user_task;
+import starter.navigation.NavigateTo;
+import starter.task.user_login_task;
 
-import static net.serenitybdd.screenplay.actors.OnStage.*;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
 public class ejemplo_test2 {
+
 String user;
 String pass;
     @Before
@@ -19,7 +21,7 @@ String pass;
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^(.*) ejemplo test ")
+    @Given("^(.*) ejemplo test")
     public void initial(String user) {
         this.user=user;
 
@@ -28,7 +30,8 @@ String pass;
     @When("ella/el buscan {string}")
     public void search_for_test(String pass) {
         theActorCalled(user).attemptsTo(
-      login_user_task.login_user_app(pass,user)
+                NavigateTo.test_page2(),
+                user_login_task.login_user_app(pass,user)
 
         );
     }
