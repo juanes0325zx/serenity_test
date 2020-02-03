@@ -6,50 +6,34 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.serenitybdd.screenplay.ensure.Ensure;
-import starter.navigation.NavigateTo;
-import starter.search.SearchFor;
-import starter.search.SearchResult;
+import starter.search.repositorio.task.login_user_task;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
-import static org.hamcrest.Matchers.*;
-import static starter.matchers.StringContainsIgnoringCase.containsIgnoringCase;
 
 public class ejemplo_test2 {
-
+String user;
+String pass;
     @Before
     public void setTheStage() {
+
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^(.*) ejemplo test")
-    public void initial(String actor) {
-        theActorCalled(actor).attemptsTo(NavigateTo.test_page2());
+    @Given("^(.*) ejemplo test ")
+    public void initial(String user) {
+        this.user=user;
+
     }
 
     @When("ella/el buscan {string}")
-    public void search_for_test(String term) {
+    public void search_for_test(String pass) {
+        theActorCalled(user).attemptsTo(
+      login_user_task.login_user_app(pass,user)
 
-        withCurrentActor(
-                SearchFor.term(term)
         );
     }
 
     @Then("validar titulos {string}")
     public void validate_titles(String term) {
-        withCurrentActor(
-                Ensure.thatTheAnswersTo(SearchResult.titles())
-                        .allMatch("a title containing '" + term + "'",
-                                title -> title.toLowerCase().contains(term.toLowerCase()))
-
-        );
-
-        theActorInTheSpotlight().should(
-                seeThat("search result titles",
-                        SearchResult.titles(), hasSize(greaterThan(0))),
-                seeThat("search result titles",
-                        SearchResult.titles(), everyItem(containsIgnoringCase(term)))
-        );
     }
 }

@@ -1,6 +1,6 @@
 Feature: Search by keyword
 
-  Scenario: go to youtube
+  Scenario: login test
     Given Sergey ejemplo test
     When el buscan "cucumber"
     Then validar titulos "cucumber"

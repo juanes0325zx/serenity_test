@@ -1,4 +1,4 @@
-package starter.stepdefinitions;
+package starter.stepdefinitions.example;
 
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
