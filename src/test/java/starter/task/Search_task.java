@@ -11,7 +11,7 @@ import starter.search.SearchForm;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class Search_task implements Task {
+public class Search_task{ //implements Task {
 
     private final String video;
 
@@ -20,9 +20,14 @@ public class Search_task implements Task {
         this.video =video;
     }
     public static Performable search_one_video(String video){
-        return instrumented(Search_task.class,video);
+      //  return instrumented(Search_task.class,video);
+       return Task.where("{0} Searching on toutube #video",
+                Click.on(search.txt_search),
+                Enter.keyValues(video).into(search.txt_search),
+                Click.on(search.btn_search)
+        ).with("video").of(video);
     }
-
+/*
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
@@ -39,5 +44,5 @@ public class Search_task implements Task {
                 Click.on(search.btn_search)
         ).with("video").of(video);
     }
-
+*/
 }

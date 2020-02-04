@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="starter.CucumberTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="iMac-de-juan.local" time="0.0">
   <properties/>
-  <system-out><![CDATA[09:39:13.819 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+  <system-out><![CDATA[10:21:56.404 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -18,8 +18,8 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-09:39:13.825 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Search by keyword
-09:39:14.122 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - 
+10:21:56.410 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Search by keyword
+10:22:08.371 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - 
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
   _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
  (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
@@ -27,45 +27,41 @@
  (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
           \_\                                                            
 
-TEST FAILED WITH ERROR: Searching on toutube
----------------------------------------------------------------------
-09:39:14.174 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - TEST FAILED AT STEP When el buscan "blid guardian"
-09:39:14.174 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - Could not find a matching constructor for class class starter.task.Search_task with parameters [blid guardian]
+TEST FAILED: test ejemplo
+--------------------------------------------------------------------------
+10:22:08.424 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - TEST FAILED AT STEP Then search result titles should be a collection with size a value greater than (0)
+10:22:08.424 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - Expected: a collection with size a value greater than <0> but: collection size <0> was equal to <0>
 Feature: Search by keyword
 
-  Scenario: Searching on toutube                                  ?[90m# src/test/resources/features/search/search_video_on_youtube.feature:3?[0m
+  Scenario: test ejemplo                                          ?[90m# src/test/resources/features/search/search_video_on_youtube.feature:3?[0m
     ?[32mGiven ?[0m?[32m?[0m?[32m?[1mSergey?[0m?[32m ejemplo test?[0m                                     ?[90m# search_video.initial(String)?[0m
-    ?[31mWhen ?[0m?[31mel buscan ?[0m?[31m?[1m"blid guardian"?[0m                                ?[90m# search_video.search_for_test(String)?[0m
-      ?[31mjava.lang.IllegalArgumentException: Could not find a matching constructor for class class starter.task.Search_task with parameters [blid guardian]
-	at net.thucydides.core.steps.StepFactory.argumentTypesFrom(StepFactory.java:222)
-	at net.thucydides.core.steps.StepFactory.immutableStepLibrary(StepFactory.java:212)
-	at net.thucydides.core.steps.StepFactory.createProxyStepLibrary(StepFactory.java:203)
-	at net.thucydides.core.steps.StepFactory.instantiateUniqueStepLibraryFor(StepFactory.java:179)
-	at net.thucydides.core.steps.StepFactory.getUniqueStepLibraryFor(StepFactory.java:115)
-	at net.serenitybdd.screenplay.Tasks.instrumented(Tasks.java:12)
-	at starter.task.Search_task.search_one_video(Search_task.java:20)
-	at starter.stepdefinitions.search_video.search_for_test(search_video.java:34)
-	at ?.el buscan "blid guardian"(src/test/resources/features/search/search_video_on_youtube.feature:5)
+    ?[32mWhen ?[0m?[32mel buscan ?[0m?[32m?[1m"blid guardian"?[0m                                ?[90m# search_video.el_buscan(String)?[0m
+    ?[31mThen ?[0m?[31mall the result titles should contain the word ?[0m?[31m?[1m"cucumber"?[0m ?[90m# SearchOnDuckDuckGoStepDefinitions.all_the_result_titles_should_contain_the_word(String)?[0m
+      ?[31mjava.lang.AssertionError: 
+Expected: a collection with size a value greater than <0>
+     but: collection size <0> was equal to <0>
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at starter.stepdefinitions.SearchOnDuckDuckGoStepDefinitions.all_the_result_titles_should_contain_the_word(SearchOnDuckDuckGoStepDefinitions.java:49)
+	at ?.all the result titles should contain the word "cucumber"(src/test/resources/features/search/search_video_on_youtube.feature:6)
 ?[0m
-    ?[36mThen ?[0m?[36mall the result titles should contain the word ?[0m?[36m?[1m"cucumber"?[0m ?[90m# SearchOnDuckDuckGoStepDefinitions.all_the_result_titles_should_contain_the_word(String)?[0m
 
 ?[31mFailed scenarios:?[0m
-?[31msrc/test/resources/features/search/search_video_on_youtube.feature:3 ?[0m# Searching on toutube
+?[31msrc/test/resources/features/search/search_video_on_youtube.feature:3 ?[0m# test ejemplo
 
 1 Scenarios (?[31m1 failed?[0m)
-3 Steps (?[31m1 failed?[0m, ?[36m1 skipped?[0m, ?[32m1 passed?[0m)
-0m0,449s
+3 Steps (?[31m1 failed?[0m, ?[32m2 passed?[0m)
+0m12,113s
 
-java.lang.IllegalArgumentException: Could not find a matching constructor for class class starter.task.Search_task with parameters [blid guardian]
-	at net.thucydides.core.steps.StepFactory.argumentTypesFrom(StepFactory.java:222)
-	at net.thucydides.core.steps.StepFactory.immutableStepLibrary(StepFactory.java:212)
-	at net.thucydides.core.steps.StepFactory.createProxyStepLibrary(StepFactory.java:203)
-	at net.thucydides.core.steps.StepFactory.instantiateUniqueStepLibraryFor(StepFactory.java:179)
-	at net.thucydides.core.steps.StepFactory.getUniqueStepLibraryFor(StepFactory.java:115)
-	at net.serenitybdd.screenplay.Tasks.instrumented(Tasks.java:12)
-	at starter.task.Search_task.search_one_video(Search_task.java:20)
-	at starter.stepdefinitions.search_video.search_for_test(search_video.java:34)
-	at ?.el buscan "blid guardian"(src/test/resources/features/search/search_video_on_youtube.feature:5)
+java.lang.AssertionError: 
+Expected: a collection with size a value greater than <0>
+     but: collection size <0> was equal to <0>
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at starter.stepdefinitions.SearchOnDuckDuckGoStepDefinitions.all_the_result_titles_should_contain_the_word(SearchOnDuckDuckGoStepDefinitions.java:49)
+	at ?.all the result titles should contain the word "cucumber"(src/test/resources/features/search/search_video_on_youtube.feature:6)
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

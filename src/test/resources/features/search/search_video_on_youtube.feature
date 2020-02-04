@@ -1,6 +1,6 @@
 Feature: Search by keyword
 
-  Scenario: Searching on toutube
+  Scenario: test ejemplo
     Given Sergey ejemplo test
     When el buscan "blid guardian"
-    Then all the result titles should contain the word "cucumber"
+    Then validar titulos "cucumber"

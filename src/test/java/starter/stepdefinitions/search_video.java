@@ -13,28 +13,32 @@ import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 
 public class search_video {
-
+/*
         @Before
-        public void setTheStage() {
+        public void setTheStage() { OnStage.setTheStage(new OnlineCast());}
 
-            OnStage.setTheStage(new OnlineCast());
-        }
+ */
 
-        @Given("^(.*) ejemplo test")
-        public void initial(String Actor) {
-            theActorCalled(Actor).attemptsTo(NavigateTo.search_vidio_on_youtube());
-        }
+String actor;
 
-        @When("ella/el buscan {string}")
-        public void search_for_test(String video) {
-            withCurrentActor(
-                    Search_task.test(video)
-            );
-        }
 
-        @Then("validar titulos {string}")
-        public void validate_titles(String term) {
-
-        }
+    @Given("(.*) ejemplo test")
+    public void initial(String actor) {
+        this.actor = actor;
     }
+
+    @When("el buscan {string}")
+    public void el_buscan(String video) {
+        theActorCalled(actor).attemptsTo(
+                NavigateTo.search_vidio_on_youtube()
+        );
+
+    }
+    @Then("validar titulos {string}")
+    public void validate_titles(String term) {
+        withCurrentActor(Search_task.search_one_video(term));
+    }
+
+
+}
 
