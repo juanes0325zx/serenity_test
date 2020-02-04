@@ -27,14 +27,12 @@ public class user_login_task implements Task {
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                ///////
 
                 Enter.keyValues(username).into(login.txt_user),
                 Enter.keyValues(username).into(login.txt_passwoard),
-                Click.on(login.chk_remenber_seccion),
+              //  Click.on(login.chk_remenber_seccion),
                 Click.on(login.btn_login)
 
-///////
         );
     }
 

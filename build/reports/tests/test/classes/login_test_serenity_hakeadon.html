@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.845s</div>
+<div class="counter">6.618s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,86 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="login test"></a>
-<h3 class="failures">login test</h3>
-<span class="code">
-<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username&quot;}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'iMac-de-juan.local', ip: 'fe80:0:0:0:c1d:3d9d:da60:535e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.16 (93fcc21110c10..., userDataDir: /var/folders/h6/_s9pywk560q...}, goog:chromeOptions: {debuggerAddress: localhost:60949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 51662c93d1351b41bf2908235ec3c26d
-*** Element info: {Using=id, value=username}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)
-	at net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:18)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:217)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.sendKeys(WebElementFacadeImpl.java:1289)
-	at net.serenitybdd.screenplay.actions.SendKeysIntoBy.performAs(SendKeysIntoBy.java:27)
-	at net.serenitybdd.screenplay.actions.SendKeysIntoBy$$EnhancerByCGLIB$$687a6854.CGLIB$performAs$0(&lt;generated&gt;)
-	at net.serenitybdd.screenplay.actions.SendKeysIntoBy$$EnhancerByCGLIB$$687a6854$$FastClassByCGLIB$$674dc823.invoke(&lt;generated&gt;)
-	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:478)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:463)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:438)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:179)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:166)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:72)
-	at net.serenitybdd.screenplay.actions.SendKeysIntoBy$$EnhancerByCGLIB$$687a6854.performAs(&lt;generated&gt;)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:170)
-	at starter.task.user_login_task.performAs(user_login_task.java:29)
-	at starter.task.user_login_task$$EnhancerByCGLIB$$2adb561b.CGLIB$performAs$0(&lt;generated&gt;)
-	at starter.task.user_login_task$$EnhancerByCGLIB$$2adb561b$$FastClassByCGLIB$$87e7d8e0.invoke(&lt;generated&gt;)
-	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:478)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:463)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:438)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:179)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:166)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:72)
-	at starter.task.user_login_task$$EnhancerByCGLIB$$2adb561b.performAs(&lt;generated&gt;)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:170)
-	at starter.stepdefinitions.ejemplo_test2.search_for_test(ejemplo_test2.java:32)
-	at ✽.el buscan &quot;cucumber&quot;(src/test/resources/features/test/test_example2.feature:5)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -151,16 +81,16 @@ Session ID: 51662c93d1351b41bf2908235ec3c26d
 </tr>
 </thead>
 <tr>
-<td class="failures">login test</td>
-<td class="failures">4.845s</td>
-<td class="failures">failed</td>
+<td class="success">login test</td>
+<td class="success">6.618s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>15:13:19.920 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+<pre>14:45:15.188 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -170,20 +100,20 @@ Session ID: 51662c93d1351b41bf2908235ec3c26d
 
 TEST STARTED: login test
 -------------------------------------------------------------------(login-test-serenity-hakeadon;login-test)
-15:13:20.420 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
-15:13:20.420 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
+14:45:15.684 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+14:45:15.684 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>feb 03, 2020 3:13:20 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+<pre>feb 04, 2020 2:45:15 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACI?N: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 48952
+Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 43448
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-feb 03, 2020 3:13:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+feb 04, 2020 2:45:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACI?N: Detected dialect: W3C
 </pre>
 </span>
@@ -196,7 +126,7 @@ INFORMACI?N: Detected dialect: W3C
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1.1</a> at 03-feb-2020 15:13:26</p>
+<a href="http://www.gradle.org">Gradle 6.1.1</a> at 04-feb-2020 14:45:23</p>
 </div>
 </div>
 </body>
