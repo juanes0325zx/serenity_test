@@ -6,9 +6,9 @@ import net.serenitybdd.screenplay.actions.Open;
 
 public class NavigateTo {
 
-    public static Performable theDuckDuckGoHomePage() {
-        return Task.where("{0} opens the DuckDuckGo home page",
-                Open.browserOn().the(DuckDuckGoHomePage.class)
+    public static Performable search_vidio_on_youtube() {
+        return Task.where("{0} Searching on toutube",
+                Open.browserOn().the(URL.class)
         );
     }
 }
