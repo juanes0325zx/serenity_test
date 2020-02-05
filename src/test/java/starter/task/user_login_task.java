@@ -21,7 +21,7 @@ public class user_login_task implements Task {
         this.pass=pass;
     }
     public static Performable login_user_app(String pass, String username){
-        return instrumented(user_login_task.class,username,pass);
+        return instrumented(user_login_task.class,pass,username);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class user_login_task implements Task {
         actor.attemptsTo(
 
                 Enter.keyValues(username).into(login.txt_user),
-                Enter.keyValues(username).into(login.txt_passwoard),
+                Enter.keyValues(pass).into(login.txt_passwoard),
               //  Click.on(login.chk_remenber_seccion),
                 Click.on(login.btn_login)
 

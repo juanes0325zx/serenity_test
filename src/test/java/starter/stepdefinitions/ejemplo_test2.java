@@ -7,9 +7,10 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import starter.navigation.NavigateTo;
+import starter.task.CreditAvaliable;
 import starter.task.user_login_task;
-
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class ejemplo_test2 {
 
@@ -31,12 +32,15 @@ String pass;
     public void search_for_test(String pass) {
         theActorCalled(user).attemptsTo(
                 NavigateTo.test_page2(),
-                user_login_task.login_user_app(pass,user)
+                user_login_task.login_user_app(user,pass)
 
         );
     }
 
     @Then("validar titulos {string}")
-    public void validate_titles(String term) {
+    public void validate_titles(String validate) {
     }
+     //theActorInTheSpotlight
+
+
 }
