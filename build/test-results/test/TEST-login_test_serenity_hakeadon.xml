@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="login_test_serenity_hakeadon" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-02-05T15:14:20" hostname="iMac-de-juan.local" time="12.246">
+<testsuite name="login_test_serenity_hakeadon" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-02-05T20:29:34" hostname="iMac-de-juan.local" time="7.363">
   <properties/>
-  <testcase name="login test2" classname="login_test_serenity_hakeadon" time="6.614"/>
-  <testcase name="login test" classname="login_test_serenity_hakeadon" time="5.482"/>
-  <system-out><![CDATA[10:14:20.818 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
- _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
-|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
-  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
-  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
-  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
-                                                                  
-
-TEST STARTED: login test2
--------------------------------------------------------------------(login-test-serenity-hakeadon;login-test2)
-10:14:21.319 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
-10:14:21.319 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
-10:14:27.576 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+  <testcase name="login test" classname="login_test_serenity_hakeadon" time="7.363">
+    <failure message="java.lang.AssertionError: &#10;Expected: &quot;$17,800&quot;&#10;     but: was &quot;$350%7&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: &quot;$17,800&quot;
+     but: was &quot;$350%7&quot;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at starter.stepdefinitions.ejemplo_test2.validate_titles(ejemplo_test2.java:47)
+	at ✽.validar titulos &quot;$17,800&quot;(src/test/resources/features/test/test_example.feature:6)
+</failure>
+  </testcase>
+  <system-out><![CDATA[15:29:34.728 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -25,22 +22,15 @@ TEST STARTED: login test2
 
 TEST STARTED: login test
 -------------------------------------------------------------------(login-test-serenity-hakeadon;login-test)
-10:14:27.662 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
-10:14:27.662 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
+15:29:35.218 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+15:29:35.218 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
 ]]></system-out>
-  <system-err><![CDATA[feb 05, 2020 10:14:21 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[feb 05, 2020 3:29:34 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACI?N: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 32904
+Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 23551
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-feb 05, 2020 10:14:22 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACI?N: Detected dialect: W3C
-feb 05, 2020 10:14:27 AM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACI?N: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 19908
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-feb 05, 2020 10:14:28 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+feb 05, 2020 3:29:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACI?N: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

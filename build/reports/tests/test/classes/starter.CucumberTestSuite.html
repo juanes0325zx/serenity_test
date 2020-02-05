@@ -82,7 +82,7 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>10:14:20.698 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+<pre>15:29:34.608 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -99,45 +99,50 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-10:14:20.705 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Login test serenity hakeadon
-10:14:20.717 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Login test serenity hakeadon
-10:14:27.574 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+15:29:34.615 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Login test serenity hakeadon
+15:29:42.235 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: login test2
-----------------------------------------------------------------------------
-10:14:33.206 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
-
-TEST PASSED: login test
-----------------------------------------------------------------------------
+TEST FAILED: login test
+--------------------------------------------------------------------------
+15:29:42.286 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - TEST FAILED AT STEP Then prueba de visualizacion balance should be '$17,800'
+15:29:42.287 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - Expected: &quot;$17,800&quot; but: was &quot;$350%7&quot;
 Feature: login_test_serenity_hakeadon
 
-  Scenario: login test2           ?[90m# src/test/resources/features/test/test_example.feature:3?[0m
-    ?[32mGiven ?[0m?[32m?[0m?[32m?[1m&quot;Sergey&quot;?[0m?[32m ejemplo test?[0m   ?[90m# ejemplo_test2.initial(String)?[0m
-    ?[32mWhen ?[0m?[32mel buscan ?[0m?[32m?[1m&quot;cucumber&quot;?[0m     ?[90m# ejemplo_test2.search_for_test(String)?[0m
-    ?[32mThen ?[0m?[32mvalidar titulos ?[0m?[32m?[1m&quot;17,800&quot;?[0m ?[90m# ejemplo_test2.validate_titles(String)?[0m
+  Scenario: login test             ?[90m# src/test/resources/features/test/test_example.feature:3?[0m
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1m&quot;Sergey&quot;?[0m?[32m ejemplo test?[0m    ?[90m# ejemplo_test2.initial(String)?[0m
+    ?[32mWhen ?[0m?[32mel buscan ?[0m?[32m?[1m&quot;cucumber&quot;?[0m      ?[90m# ejemplo_test2.search_for_test(String)?[0m
+    ?[31mThen ?[0m?[31mvalidar titulos ?[0m?[31m?[1m&quot;$17,800&quot;?[0m ?[90m# ejemplo_test2.validate_titles(String)?[0m
+      ?[31mjava.lang.AssertionError: 
+Expected: &quot;$17,800&quot;
+     but: was &quot;$350%7&quot;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at starter.stepdefinitions.ejemplo_test2.validate_titles(ejemplo_test2.java:47)
+	at ?.validar titulos &quot;$17,800&quot;(src/test/resources/features/test/test_example.feature:6)
+?[0m
 
-Feature: login_test_serenity_hakeadon
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/test/test_example.feature:3 ?[0m# login test
 
-  Scenario: login test            ?[90m# src/test/resources/features/test/test_example2.feature:3?[0m
-    ?[32mGiven ?[0m?[32m?[0m?[32m?[1m&quot;Sergey&quot;?[0m?[32m ejemplo test?[0m   ?[90m# ejemplo_test2.initial(String)?[0m
-    ?[32mWhen ?[0m?[32mel buscan ?[0m?[32m?[1m&quot;cucumber&quot;?[0m     ?[90m# ejemplo_test2.search_for_test(String)?[0m
-    ?[32mThen ?[0m?[32mvalidar titulos ?[0m?[32m?[1m&quot;17,800&quot;?[0m ?[90m# ejemplo_test2.validate_titles(String)?[0m
+1 Scenarios (?[31m1 failed?[0m)
+3 Steps (?[31m1 failed?[0m, ?[32m2 passed?[0m)
+0m7,772s
 
-2 Scenarios (?[32m2 passed?[0m)
-6 Steps (?[32m6 passed?[0m)
-0m12,602s
+java.lang.AssertionError: 
+Expected: &quot;$17,800&quot;
+     but: was &quot;$350%7&quot;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at starter.stepdefinitions.ejemplo_test2.validate_titles(ejemplo_test2.java:47)
+	at ?.validar titulos &quot;$17,800&quot;(src/test/resources/features/test/test_example.feature:6)
 
 </pre>
 </span>
@@ -150,7 +155,7 @@ Feature: login_test_serenity_hakeadon
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1.1</a> at 05-feb-2020 10:14:34</p>
+<a href="http://www.gradle.org">Gradle 6.1.1</a> at 05-feb-2020 15:29:43</p>
 </div>
 </div>
 </body>

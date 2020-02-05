@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">12.096s</div>
+<div class="counter">7.363s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,16 +61,37 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard error</a>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="login test"></a>
+<h3 class="failures">login test</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expected: &quot;$17,800&quot;
+     but: was &quot;$350%7&quot;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at starter.stepdefinitions.ejemplo_test2.validate_titles(ejemplo_test2.java:47)
+	at ✽.validar titulos &quot;$17,800&quot;(src/test/resources/features/test/test_example.feature:6)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,33 +102,16 @@
 </tr>
 </thead>
 <tr>
-<td class="success">login test</td>
-<td class="success">5.482s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">login test2</td>
-<td class="success">6.614s</td>
-<td class="success">passed</td>
+<td class="failures">login test</td>
+<td class="failures">7.363s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>10:14:20.818 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
- _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
-|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
-  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
-  | | | |___ ___) || |    ___) || |/ ___ \|  _ &lt; | | | |___| |_| |
-  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
-                                                                  
-
-TEST STARTED: login test2
--------------------------------------------------------------------(login-test-serenity-hakeadon;login-test2)
-10:14:21.319 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
-10:14:21.319 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
-10:14:27.576 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+<pre>15:29:34.728 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -117,27 +121,20 @@ TEST STARTED: login test2
 
 TEST STARTED: login test
 -------------------------------------------------------------------(login-test-serenity-hakeadon;login-test)
-10:14:27.662 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
-10:14:27.662 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
+15:29:35.218 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+15:29:35.218 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
 </pre>
 </span>
 </div>
-<div id="tab2" class="tab">
+<div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>feb 05, 2020 10:14:21 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+<pre>feb 05, 2020 3:29:34 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACI?N: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 32904
+Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 23551
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-feb 05, 2020 10:14:22 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACI?N: Detected dialect: W3C
-feb 05, 2020 10:14:27 AM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACI?N: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 19908
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-feb 05, 2020 10:14:28 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+feb 05, 2020 3:29:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACI?N: Detected dialect: W3C
 </pre>
 </span>
@@ -150,7 +147,7 @@ INFORMACI?N: Detected dialect: W3C
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1.1</a> at 05-feb-2020 10:14:34</p>
+<a href="http://www.gradle.org">Gradle 6.1.1</a> at 05-feb-2020 15:29:43</p>
 </div>
 </div>
 </body>

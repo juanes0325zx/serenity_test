@@ -3,6 +3,8 @@ package starter.navigation;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
+import starter.navigation.pages.test_page;
+import starter.navigation.pages.test_page2;
 
 public class NavigateTo {
 

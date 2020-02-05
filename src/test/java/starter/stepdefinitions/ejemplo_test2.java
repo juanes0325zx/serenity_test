@@ -7,10 +7,13 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import starter.navigation.NavigateTo;
-import starter.task.CreditAvaliable;
+import starter.model.dashBoard.OverViewData;
 import starter.task.user_login_task;
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-import static net.serenitybdd.screenplay.actors.OnStage.*;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class ejemplo_test2 {
 
@@ -33,14 +36,23 @@ String pass;
         theActorCalled(user).attemptsTo(
                 NavigateTo.test_page2(),
                 user_login_task.login_user_app(user,pass)
-
+               // , Ensure.that(dashboard.CREDIT_AVALIABLE2).isDisplayed()
+             //   ,Ensure.that(dashboard.CREDIT_AVALIABLE).text().isEqualTo("17,800")
         );
     }
 
     @Then("validar titulos {string}")
     public void validate_titles(String validate) {
-    }
-     //theActorInTheSpotlight
 
+theActorInTheSpotlight().should (
+        seeThat ("prueba de visualizacion credito",OverViewData.credit_avaliable (),equalTo (validate)),
+        seeThat ("prueba de visualizacion balance",OverViewData.total_balance (),equalTo (validate)),
+        seeThat ("prueba de visualizacion credito",OverViewData.credit_avaliable (),equalTo (validate))
+
+);
+
+
+
+    }
 
 }
