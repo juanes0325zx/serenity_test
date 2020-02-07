@@ -1,4 +1,4 @@
-package starter.model;
+package starter.model.login;
 
 import org.openqa.selenium.By;
 

@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="login_test_serenity_hakeadon" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-02-05T20:29:34" hostname="iMac-de-juan.local" time="7.363">
+<testsuite name="login_test_serenity_hakeadon" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-02-06T20:30:06" hostname="iMac-de-juan.local" time="6.396">
   <properties/>
-  <testcase name="login test" classname="login_test_serenity_hakeadon" time="7.363">
-    <failure message="java.lang.AssertionError: &#10;Expected: &quot;$17,800&quot;&#10;     but: was &quot;$350%7&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;$17,800&quot;
-     but: was &quot;$350%7&quot;
+  <testcase name="login test" classname="login_test_serenity_hakeadon" time="6.396">
+    <failure message="java.lang.AssertionError: no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=79.0.3945.130)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'iMac-de-juan.local', ip: 'fe80:0:0:0:89b:d6b:7bea:4a50%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_241'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.16 (93fcc21110c10..., userDataDir: /var/folders/h6/_s9pywk560q...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 8c002c5fa3d6d7cdfeef883b0587053b&#10;*** Element info: {Using=xpath, value=//div[contains(text(), 'Credit Available')]/following-sibling::div[@class='balance-value']}&#10;no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=79.0.3945.130)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'iMac-de-juan.local', ip: 'fe80:0:0:0:89b:d6b:7bea:4a50%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_241'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.16 (93fcc21110c10..., userDataDir: /var/folders/h6/_s9pywk560q...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 8c002c5fa3d6d7cdfeef883b0587053b&#10;*** Element info: {Using=xpath, value=//div[contains(text(), 'Total Balance')]/following-sibling::div[@class='balance-value']}&#10;no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=79.0.3945.130)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'iMac-de-juan.local', ip: 'fe80:0:0:0:89b:d6b:7bea:4a50%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_241'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.16 (93fcc21110c10..., userDataDir: /var/folders/h6/_s9pywk560q...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 8c002c5fa3d6d7cdfeef883b0587053b&#10;*** Element info: {Using=xpath, value=//div[contains(text(), 'Credit Available')]/following-sibling::div[@class='balance-value']}" type="java.lang.AssertionError">java.lang.AssertionError: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'iMac-de-juan.local', ip: 'fe80:0:0:0:89b:d6b:7bea:4a50%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.16 (93fcc21110c10..., userDataDir: /var/folders/h6/_s9pywk560q...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8c002c5fa3d6d7cdfeef883b0587053b
+*** Element info: {Using=xpath, value=//div[contains(text(), 'Credit Available')]/following-sibling::div[@class='balance-value']}
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'iMac-de-juan.local', ip: 'fe80:0:0:0:89b:d6b:7bea:4a50%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.16 (93fcc21110c10..., userDataDir: /var/folders/h6/_s9pywk560q...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8c002c5fa3d6d7cdfeef883b0587053b
+*** Element info: {Using=xpath, value=//div[contains(text(), 'Total Balance')]/following-sibling::div[@class='balance-value']}
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'iMac-de-juan.local', ip: 'fe80:0:0:0:89b:d6b:7bea:4a50%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.16 (93fcc21110c10..., userDataDir: /var/folders/h6/_s9pywk560q...}, goog:chromeOptions: {debuggerAddress: localhost:53179}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8c002c5fa3d6d7cdfeef883b0587053b
+*** Element info: {Using=xpath, value=//div[contains(text(), 'Credit Available')]/following-sibling::div[@class='balance-value']}
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
-	at starter.stepdefinitions.ejemplo_test2.validate_titles(ejemplo_test2.java:47)
+	at starter.stepdefinitions.ejemplo_test2.validate_titles(ejemplo_test2.java:49)
 	at ✽.validar titulos &quot;$17,800&quot;(src/test/resources/features/test/test_example.feature:6)
 </failure>
   </testcase>
-  <system-out><![CDATA[15:29:34.728 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+  <system-out><![CDATA[15:30:06.238 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -22,15 +46,17 @@ Expected: &quot;$17,800&quot;
 
 TEST STARTED: login test
 -------------------------------------------------------------------(login-test-serenity-hakeadon;login-test)
-15:29:35.218 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
-15:29:35.218 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
+15:30:06.729 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+15:30:06.729 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors;\n, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
+15:30:12.475 [Test worker] WARN  n.t.core.webdriver.WebDriverFacade - Failed to take screenshot (Unexpected result for screenshot command: null)
 ]]></system-out>
-  <system-err><![CDATA[feb 05, 2020 3:29:34 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[feb 06, 2020 3:30:06 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACI?N: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 23551
+Starting ChromeDriver 79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}) on port 8697
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-feb 05, 2020 3:29:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+feb 06, 2020 3:30:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACI?N: Detected dialect: W3C
+[1581021012.466][WARNING]: screenshot failed, retrying disconnected: received Inspector.detached event
 ]]></system-err>
 </testsuite>

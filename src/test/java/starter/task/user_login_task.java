@@ -5,8 +5,7 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.thucydides.core.annotations.locators.WaitForWebElementCollection;
-import starter.model.login;
+import starter.model.login.login;
 
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -27,7 +26,6 @@ public class user_login_task implements Task {
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-
                 Enter.keyValues(username).into(login.txt_user),
                 Enter.keyValues(pass).into(login.txt_passwoard),
               //  Click.on(login.chk_remenber_seccion),
