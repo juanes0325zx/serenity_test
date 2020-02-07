@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 import starter.model.dashBoard.dashboard;
 import starter.navigation.NavigateTo;
 import starter.model.dashBoard.OverViewData;
+import starter.model.menu.OverViewData_menu;
 import starter.task.user_login_task;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -50,6 +51,11 @@ theActorInTheSpotlight().should (
         seeThat ("prueba de visualizacion credito",OverViewData.credit_avaliable (),equalTo (validate)),
         seeThat ("prueba de visualizacion balance",OverViewData.total_balance (),equalTo ("$350%7")),
         seeThat ("prueba de visualizacion credito",OverViewData.credit_avaliable (),equalTo (validate))
+        ,seeThat ("prueba de visualizacion opción del menu credit cards",OverViewData_menu.CREDIT_CARDS(),equalTo ("Credit cards"))
+        ,seeThat ("prueba de visualizacion opción del menu debit cards",OverViewData_menu.DEBIT_CARDS(),equalTo ("Debit cards"))
+        ,seeThat ("prueba de visualizacion opción del menu lending",OverViewData_menu.LENDING (),equalTo ("Lending"))
+        ,seeThat ("prueba de visualizacion opción del menu loans",OverViewData_menu.LOANS (),equalTo ("Loans"))
+        ,seeThat ("prueba de visualizacion opción del menu mortage",OverViewData_menu.MORTAGAGES (),equalTo ("Mortgages"))
 );
         theActorCalled(user).attemptsTo(
                  Ensure.that(dashboard.TableRow_1_CELL_1).isDisplayed()
