@@ -48,7 +48,6 @@ public class dashboard {
 
 
 
-
     //public static By CREDIT_AVALIABLE2 = By.xpath("//div[contains(text(), 'Credit Available')]/following-sibling::div[@class='balance-value']");
 //div[contains(text(),'Due Today')]/following-sibling::div[@class='balance-value danger']
     //div[@class='table-responsive']//ancestor::div[@class='element-box-tp']

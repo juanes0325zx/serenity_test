@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="starter.CucumberTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="iMac-de-juan.local" time="0.0">
   <properties/>
-  <system-out><![CDATA[10:14:46.144 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+  <system-out><![CDATA[09:41:09.971 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -18,8 +18,8 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-10:14:46.151 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Login test serenity hakeadon
-10:15:00.953 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+09:41:09.984 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Login test serenity hakeadon
+09:41:27.077 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
   _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
  (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
@@ -32,13 +32,13 @@ TEST PASSED: login test
 Feature: login_test_serenity_hakeadon
 
   Scenario: login test             ?[90m# src/test/resources/features/test/test_example.feature:3?[0m
-    ?[32mGiven ?[0m?[32m?[0m?[32m?[1m"Sergey"?[0m?[32m ejemplo test?[0m    ?[90m# ejemplo_test2.initial(String)?[0m
-    ?[32mWhen ?[0m?[32mel buscan ?[0m?[32m?[1m"cucumber"?[0m      ?[90m# ejemplo_test2.search_for_test(String)?[0m
-    ?[32mThen ?[0m?[32mvalidar titulos ?[0m?[32m?[1m"$17,800"?[0m ?[90m# ejemplo_test2.validate_titles(String)?[0m
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1m"Sergey"?[0m?[32m ejemplo test?[0m    ?[90m# ejemplo_test.initial(String)?[0m
+    ?[32mWhen ?[0m?[32mel buscan ?[0m?[32m?[1m"cucumber"?[0m      ?[90m# ejemplo_test.search_for_test(String)?[0m
+    ?[32mThen ?[0m?[32mvalidar titulos ?[0m?[32m?[1m"$17,800"?[0m ?[90m# ejemplo_test.validate_titles(String)?[0m
 
 1 Scenarios (?[32m1 passed?[0m)
 3 Steps (?[32m3 passed?[0m)
-0m14,901s
+0m17,223s
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

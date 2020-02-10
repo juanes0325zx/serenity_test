@@ -9,16 +9,17 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import starter.model.dashBoard.dashboard;
 import starter.navigation.NavigateTo;
-import starter.model.dashBoard.OverViewData;
+import starter.model.dashBoard.OverViewData_DashBoard;
 import starter.model.menu.OverViewData_menu;
-import starter.task.user_login_task;
+import starter.task.Builder.login_Builder_patron;
+import starter.task.StepBuilder.user_login_task;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class ejemplo_test2 {
+public class ejemplo_test {
 
 String user;
 String pass;
@@ -37,10 +38,13 @@ String pass;
     public void search_for_test(String pass) {
         theActorCalled(user).attemptsTo(
                 NavigateTo.test_page2(),
-                user_login_task.login_user_app(user,pass)
+               /* user_login_task.login_user_app(user,pass)*/
+                login_Builder_patron
+                        .with ()
+                        .username (user)
+                        .pass (pass)
+                        .sendData (true)
 
-               //dashboard.CREDIT_AVALIABLE2).isDisplayed()
-             //   ,Ensure.that(dashboard.CREDIT_AVALIABLE).text().isEqualTo("17,800")
         );
     }
 
@@ -48,9 +52,9 @@ String pass;
     public void validate_titles(String validate) {
 
 theActorInTheSpotlight().should (
-        seeThat ("prueba de visualizacion credito",OverViewData.credit_avaliable (),equalTo (validate)),
-        seeThat ("prueba de visualizacion balance",OverViewData.total_balance (),equalTo ("$350%7")),
-        seeThat ("prueba de visualizacion credito",OverViewData.credit_avaliable (),equalTo (validate))
+        seeThat ("prueba de visualizacion credito", OverViewData_DashBoard.credit_avaliable (),equalTo (validate)),
+        seeThat ("prueba de visualizacion balance", OverViewData_DashBoard.total_balance (),equalTo ("$350%7")),
+        seeThat ("prueba de visualizacion credito", OverViewData_DashBoard.credit_avaliable (),equalTo (validate))
         ,seeThat ("prueba de visualizacion opción del menu credit cards",OverViewData_menu.CREDIT_CARDS(),equalTo ("Credit cards"))
         ,seeThat ("prueba de visualizacion opción del menu debit cards",OverViewData_menu.DEBIT_CARDS(),equalTo ("Debit cards"))
         ,seeThat ("prueba de visualizacion opción del menu lending",OverViewData_menu.LENDING (),equalTo ("Lending"))

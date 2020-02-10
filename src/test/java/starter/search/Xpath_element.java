@@ -31,4 +31,9 @@ public static String getByTextSpan(String span){
         String tem ="//li[@class='"+class_object+"']//span[contains(text(),'"+span+"')]";
         return tem;
     }
+    public static String getByClassInputPlaceHolder(String class_object,String span){
+        String tem ="//div[@class='"+class_object+"']//input[@placeholder='"+span+"']')]";
+        return tem;
+    }
+
 }
