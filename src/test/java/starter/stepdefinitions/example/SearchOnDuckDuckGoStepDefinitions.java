@@ -4,13 +4,12 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.eo.Se;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import starter.navigation.NavigateTo;
-import starter.search.SearchFor;
-import starter.search.SearchResult;
+import starter.search.example.SearchFor;
+import starter.search.example.SearchResult;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;

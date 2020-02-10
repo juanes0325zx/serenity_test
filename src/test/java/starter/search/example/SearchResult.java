@@ -1,7 +1,8 @@
-package starter.search;
+package starter.search.example;
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.TextContent;
+import starter.search.example.SearchResultList;
 
 import java.util.Collection;
 
