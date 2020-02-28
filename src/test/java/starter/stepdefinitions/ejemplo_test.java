@@ -21,6 +21,23 @@ public class ejemplo_test {
 
 String user;
 String pass;
+
+
+/*
+
+Feature: login_test_serenity_hakeadon
+
+
+ Scenario: login test
+    Given "Sergey" ejemplo test
+    When el buscan "cucumber"
+    And validar tabla
+    Then validar titulos "$17,800"
+
+*/
+
+
+
     @Before
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());

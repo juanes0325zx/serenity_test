@@ -1,9 +1,9 @@
 Feature: createUser
 
   Scenario: Register
-    Given "Sergey" usuario nuevo con "contraseña"
-    When "name" nombre ,"cucumber" apellido
-    Then  crear el usurio "phone "
+    Given "fernando2342@mailboxt.com" usuario nuevo con "*Testcreate898798*"
+    When "fernado" nombre ,"montoya" apellido
+    Then  crear el usurio "3042016808"
 
 
 

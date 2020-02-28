@@ -6,58 +6,90 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import starter.model.facebook_publiction.facebook_register;
 import starter.model.login.login;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class createNewUser implements Task {
 
-    private  String username;
-    private  String pass;
+    private  String mail;
+    private String pass;
+    private String name;
+    private String lastname;
+    private String phone;
     private boolean value;
 
-    public createNewUser(String pass, String username, boolean value){
-        this.username =username;
-        this.pass=pass;
+    public createNewUser(String mail, String pass,String name,String lastname,String phone, boolean value){
+        this.mail =mail;
+        this.pass =pass;
+        this.name =name;
+        this.lastname =lastname;
+        this.phone=phone;
         this.value=value;
     }
 
-    public static login_with with(){
-     return new login_with();
+    public static createNew with(){
+     return new createNew();
     }
 
     @Override
-    public <T extends Actor> void performAs(T actor){
-        actor.attemptsTo(
-                Enter.keyValues(username).into(login.txt_user),
-                Enter.keyValues(pass).into(login.txt_passwoard)
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo (
+                WaitUntil.the (facebook_register.txt_name, isVisible ()).forNoMoreThan (10).seconds (),
+                Enter.keyValues (pass).into (facebook_register.txt_name),
+                WaitUntil.the (facebook_register.txt_lastname, isVisible ()).forNoMoreThan (10).seconds (),
+                Enter.keyValues (pass).into (facebook_register.txt_lastname),
+                WaitUntil.the (facebook_register.txt_passwoard, isVisible ()).forNoMoreThan (10).seconds (),
+                Enter.keyValues (pass).into (facebook_register.txt_passwoard),
+                Click.on (facebook_register.btn_sex_male),
+                WaitUntil.the (facebook_register.txt_mail_phone, isVisible ()).forNoMoreThan (10).seconds (),
+                Enter.keyValues (pass).into (facebook_register.txt_mail_phone),
+                WaitUntil.the (facebook_register.txt_mail_confirm, isVisible ()).forNoMoreThan (10).seconds (),
+                Enter.keyValues (pass).into (facebook_register.txt_mail_confirm)
+
+
         );
-    if (value){
-        actor.attemptsTo(
-        WaitUntil.the (login.chk_remenber_seccion,isVisible()).forNoMoreThan(10).seconds(),
-        Click.on(login.chk_remenber_seccion));
-     }
-        actor.attemptsTo(
-        WaitUntil.the (login.btn_login,isVisible()).forNoMoreThan(10).seconds(),
-        Click.on(login.btn_login));
+        if (value) {
+            actor.attemptsTo (
+                    WaitUntil.the (facebook_register.btn_register, isVisible ()).forNoMoreThan (10).seconds (),
+                    Click.on (facebook_register.btn_register));
+        }
+
     }
+public static class createNew{
+    private  String mail;
+    private String pass;
+    private String name;
+    private String lastname;
+    private String phone;
 
-public static class login_with{
-    private  String username;
-    private  String pass;
 
-    public login_with username(String username){
-        this.username=username;
+    public createNew mail(String mail){
+        this.mail=mail;
         return this;
     }
 
-    public login_with pass(String pass){
+    public createNew pass(String pass){
         this.pass=pass;
         return this;
     }
-public Performable sendData(boolean value){
-        return new createNewUser (pass ,username,value);
-}
 
+    public createNew name(String name){
+        this.name=name;
+        return this;
+    }
+    public createNew lastname(String lastname){
+        this.lastname=lastname;
+        return this;
+    }
+
+    public createNew phone(String phone){
+        this.phone=phone;
+        return this;
+    }
+public Performable sendData(boolean value){
+        return new createNewUser(mail,pass,name,lastname,phone,value);
+}
 }
 }

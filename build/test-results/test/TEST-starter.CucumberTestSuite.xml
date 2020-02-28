@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="starter.CucumberTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="iMac-de-juan.local" time="0.0">
+  <properties/>
+  <system-out><![CDATA[15:14:29.673 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Rocket Chat at https://serenity-bdd.rocket.chat      
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+ Learn Serenity BDD online at http://serenity-dojo.com                               
+-------------------------------------------------------------------------------------
+
+15:14:29.680 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Create user
+15:14:29.693 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Login test serenity hakeadon
+15:14:47.907 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
+
+TEST FAILED: Register
+--------------------------------------------------------------------------
+15:14:47.988 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - TEST FAILED AT STEP When "fernado" nombre ,"montoya" apellido
+15:14:47.989 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - Expected: an element that is visible but: no matching element found by xpath: //div[@class= '_4bl7 _m-_ _8fgm']//div[@class='_58mf']//div[@id='reg_box']//form[@id='reg']//div[@class='clearfix _58mh']//div[@id='u_0_p']
+Feature: createUser
+
+  Scenario: Register                                                         ?[90m# src/test/resources/features/test/facebookRegister.feature:3?[0m
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1m"fernando2342@mailboxt.com"?[0m?[32m usuario nuevo con ?[0m?[32m?[1m"*Testcreate898798*"?[0m ?[90m# FacebookRegister.usuario_nuevo_con(String,String)?[0m
+    ?[31mWhen ?[0m?[31m?[0m?[31m?[1m"fernado"?[0m?[31m nombre ,?[0m?[31m?[1m"montoya"?[0m?[31m apellido?[0m                                ?[90m# FacebookRegister.nombre_apellido(String,String)?[0m
+      ?[31mjava.lang.AssertionError: 
+Expected: an element that is visible
+     but: no matching element found by xpath: //div[@class= '_4bl7 _m-_ _8fgm']//div[@class='_58mf']//div[@id='reg_box']//form[@id='reg']//div[@class='clearfix _58mh']//div[@id='u_0_p']
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:29)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:193)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:166)
+	at starter.task.facebook.createNewUser.performAs(createNewUser.java:38)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:197)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:168)
+	at starter.stepdefinitions.FacebookRegister.nombre_apellido(FacebookRegister.java:47)
+	at ?."fernado" nombre ,"montoya" apellido(src/test/resources/features/test/facebookRegister.feature:5)
+?[0m
+    ?[36mThen ?[0m?[36mcrear el usurio ?[0m?[36m?[1m"3042016808"?[0m                                        ?[90m# FacebookRegister.crear_el_usurio(String)?[0m
+
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/test/facebookRegister.feature:3 ?[0m# Register
+
+1 Scenarios (?[31m1 failed?[0m)
+3 Steps (?[31m1 failed?[0m, ?[36m1 skipped?[0m, ?[32m1 passed?[0m)
+0m18,409s
+
+java.lang.AssertionError: 
+Expected: an element that is visible
+     but: no matching element found by xpath: //div[@class= '_4bl7 _m-_ _8fgm']//div[@class='_58mf']//div[@id='reg_box']//form[@id='reg']//div[@class='clearfix _58mh']//div[@id='u_0_p']
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:29)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:193)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:166)
+	at starter.task.facebook.createNewUser.performAs(createNewUser.java:38)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:197)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:168)
+	at starter.stepdefinitions.FacebookRegister.nombre_apellido(FacebookRegister.java:47)
+	at ?."fernado" nombre ,"montoya" apellido(src/test/resources/features/test/facebookRegister.feature:5)
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

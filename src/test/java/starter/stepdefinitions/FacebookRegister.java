@@ -12,6 +12,7 @@ import starter.model.dashBoard.dashboard;
 import starter.model.menu.OverViewData_menu;
 import starter.navigation.NavigateTo;
 import starter.task.Builder.login_Builder_patron;
+import starter.task.facebook.createNewUser;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -31,11 +32,6 @@ String phone;
         OnStage.setTheStage(new OnlineCast());
     }
 
-
-
-
-
-
     @Given("{string} usuario nuevo con {string}")
     public void usuario_nuevo_con(String mail, String pass) {
       //inicializar las variables
@@ -49,17 +45,15 @@ String phone;
         this.name=name;
         this.lastname=lastname;
         theActorCalled(mail).attemptsTo(
-
-
-
-                /*
                 NavigateTo.FacebbokHome (),
-                //user_login_task.login_user_app(user,pass)
-                login_Builder_patron
+                createNewUser
                         .with ()
-                        .username (user)
-                        .pass (pass)
-                        .sendData (true)*/
+                        .name (this.name)
+                        .mail (this.mail)
+                        .lastname (this.lastname)
+                        .pass (this.pass)
+                        .phone (this.phone)
+                        .sendData (true)
 
         );
     }
