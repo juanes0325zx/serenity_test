@@ -52,7 +52,6 @@ String phone;
                         .mail (this.mail)
                         .lastname (this.lastname)
                         .pass (this.pass)
-                        .phone (this.phone)
                         .sendData (true)
 
         );

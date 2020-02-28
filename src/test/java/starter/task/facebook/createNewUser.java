@@ -37,16 +37,19 @@ public class createNewUser implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo (
                 WaitUntil.the (facebook_register.txt_name, isVisible ()).forNoMoreThan (10).seconds (),
-                Enter.keyValues (pass).into (facebook_register.txt_name),
+                Enter.keyValues (name).into (facebook_register.txt_name),
                 WaitUntil.the (facebook_register.txt_lastname, isVisible ()).forNoMoreThan (10).seconds (),
-                Enter.keyValues (pass).into (facebook_register.txt_lastname),
+                Enter.keyValues (lastname).into (facebook_register.txt_lastname),
                 WaitUntil.the (facebook_register.txt_passwoard, isVisible ()).forNoMoreThan (10).seconds (),
                 Enter.keyValues (pass).into (facebook_register.txt_passwoard),
                 Click.on (facebook_register.btn_sex_male),
                 WaitUntil.the (facebook_register.txt_mail_phone, isVisible ()).forNoMoreThan (10).seconds (),
-                Enter.keyValues (pass).into (facebook_register.txt_mail_phone),
+                Enter.keyValues (mail).into (facebook_register.txt_mail_phone),
                 WaitUntil.the (facebook_register.txt_mail_confirm, isVisible ()).forNoMoreThan (10).seconds (),
-                Enter.keyValues (pass).into (facebook_register.txt_mail_confirm)
+                Enter.keyValues (mail).into (facebook_register.txt_mail_confirm),
+                Click.on (facebook_register.selector_year),
+                WaitUntil.the (facebook_register.selector_year_option_1994, isVisible ()).forNoMoreThan (10).seconds (),
+                Click.on (facebook_register.selector_year_option_1994)
 
 
         );
@@ -54,6 +57,7 @@ public class createNewUser implements Task {
             actor.attemptsTo (
                     WaitUntil.the (facebook_register.btn_register, isVisible ()).forNoMoreThan (10).seconds (),
                     Click.on (facebook_register.btn_register));
+
         }
 
     }
