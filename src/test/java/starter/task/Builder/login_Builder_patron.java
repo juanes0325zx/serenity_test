@@ -5,7 +5,10 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import starter.model.login.login;
+
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class login_Builder_patron implements Task {
 
@@ -31,9 +34,11 @@ public class login_Builder_patron implements Task {
         );
     if (value){
         actor.attemptsTo(
+        WaitUntil.the (login.chk_remenber_seccion,isVisible()).forNoMoreThan(10).seconds(),
         Click.on(login.chk_remenber_seccion));
      }
         actor.attemptsTo(
+        WaitUntil.the (login.btn_login,isVisible()).forNoMoreThan(10).seconds(),
         Click.on(login.btn_login));
     }
 

@@ -29,6 +29,7 @@ String pass;
     @Given("^(.*) ejemplo test")
     public void initial(String user) {
         this.user=user;
+        setTheStage();
     }
 
 
@@ -36,7 +37,7 @@ String pass;
     public void search_for_test(String pass) {
         theActorCalled(user).attemptsTo(
                 NavigateTo.test_page2(),
-               /* user_login_task.login_user_app(user,pass)*/
+                //user_login_task.login_user_app(user,pass)
                 login_Builder_patron
                         .with ()
                         .username (user)
@@ -49,7 +50,6 @@ String pass;
     @When("validar tabla")
     public void validar_tablas() {
         theActorCalled(user).attemptsTo(
-                
                 Ensure.that(dashboard.TableRow_1_CELL_1).isDisplayed(),
                 Ensure.that(dashboard.TableRow_1_CELL_2).isDisplayed(),
                 Ensure.that(dashboard.TableRow_1_CELL_3).isDisplayed(),
