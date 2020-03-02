@@ -44,8 +44,10 @@ public class createNewUser implements Task {
                 Enter.keyValues (pass).into (facebook_register.txt_passwoard),
                 Click.on (facebook_register.btn_sex_male),
                 WaitUntil.the (facebook_register.txt_mail_phone, isVisible ()).forNoMoreThan (10).seconds (),
+                Click.on (facebook_register.txt_mail_phone),
                 Enter.keyValues (mail).into (facebook_register.txt_mail_phone),
                 WaitUntil.the (facebook_register.txt_mail_confirm, isVisible ()).forNoMoreThan (10).seconds (),
+                Click.on (facebook_register.txt_mail_confirm),
                 Enter.keyValues (mail).into (facebook_register.txt_mail_confirm),
                 Click.on (facebook_register.selector_year),
                 WaitUntil.the (facebook_register.selector_year_option_1994, isVisible ()).forNoMoreThan (10).seconds (),
@@ -56,8 +58,10 @@ public class createNewUser implements Task {
         if (value) {
             actor.attemptsTo (
                     WaitUntil.the (facebook_register.btn_register, isVisible ()).forNoMoreThan (10).seconds (),
-                    Click.on (facebook_register.btn_register));
-
+                    Click.on (facebook_register.btn_register),
+                    WaitUntil.the (facebook_register.btn_send_phone, isVisible ()).forNoMoreThan (10).seconds (),
+                    Click.on (facebook_register.btn_send_phone)
+            );
         }
 
     }

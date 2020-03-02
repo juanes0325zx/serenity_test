@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class starter.CucumberTestSuite</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class starter.CucumberTestSuite</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/starter.html">starter</a> &gt; CucumberTestSuite</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">0</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">-</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">-</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>13:11:58.639 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Rocket Chat at https://serenity-bdd.rocket.chat      
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+ Learn Serenity BDD online at http://serenity-dojo.com                               
+-------------------------------------------------------------------------------------
+
+13:11:58.649 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - Test Suite Started: Create user
+13:12:26.453 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
+
+TEST FAILED: Facebook Register
+--------------------------------------------------------------------------
+13:12:26.515 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - TEST FAILED AT STEP When &quot;ANDRES&quot; nombre ,&quot;MONTOYA&quot; apellido
+13:12:26.515 [Test worker] ERROR n.t.c.steps.ConsoleLoggingListener - Expected: an element that is visible but: no matching element found by xpath: //button[@class='_42ft _4jy0 _2kak _4jy4 _4jy1 selected _51sy']
+Feature: createUser
+
+  Scenario Outline: Facebook Register ?[90m# src/test/resources/features/test/facebookRegister.feature:3?[0m
+    ?[36mGiven &quot;&lt;email&gt;&quot; usuario nuevo con &quot;&lt;password&gt;&quot;?[0m
+    ?[36mWhen &quot;&lt;name&gt;&quot; nombre ,&quot;&lt;lastname&gt;&quot; apellido?[0m
+    ?[36mThen crear el usurio &quot;&lt;phone&gt;&quot;?[0m
+
+    Examples: 
+
+  Scenario Outline: Facebook Register                                       ?[90m# src/test/resources/features/test/facebookRegister.feature:13?[0m
+    ?[32mGiven ?[0m?[32m?[0m?[32m?[1m&quot;AndresR5445655@mailboxt.com&quot;?[0m?[32m usuario nuevo con ?[0m?[32m?[1m&quot;**fghfg5151_M**&quot;?[0m ?[90m# FacebookRegister.usuario_nuevo_con(String,String)?[0m
+    ?[31mWhen ?[0m?[31m?[0m?[31m?[1m&quot;ANDRES&quot;?[0m?[31m nombre ,?[0m?[31m?[1m&quot;MONTOYA&quot;?[0m?[31m apellido?[0m                                ?[90m# FacebookRegister.nombre_apellido(String,String)?[0m
+      ?[31mjava.lang.AssertionError: 
+Expected: an element that is visible
+     but: no matching element found by xpath: //button[@class='_42ft _4jy0 _2kak _4jy4 _4jy1 selected _51sy']
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:29)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:193)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:166)
+	at starter.task.facebook.createNewUser.performAs(createNewUser.java:59)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:197)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:168)
+	at starter.stepdefinitions.FacebookRegister.nombre_apellido(FacebookRegister.java:52)
+	at ?.&quot;ANDRES&quot; nombre ,&quot;MONTOYA&quot; apellido(src/test/resources/features/test/facebookRegister.feature:7)
+?[0m
+    ?[36mThen ?[0m?[36mcrear el usurio ?[0m?[36m?[1m&quot;3042016808&quot;?[0m                                       ?[90m# FacebookRegister.crear_el_usurio(String)?[0m
+
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/test/facebookRegister.feature:13 ?[0m# Facebook Register
+
+1 Scenarios (?[31m1 failed?[0m)
+3 Steps (?[31m1 failed?[0m, ?[36m1 skipped?[0m, ?[32m1 passed?[0m)
+0m27,984s
+
+java.lang.AssertionError: 
+Expected: an element that is visible
+     but: no matching element found by xpath: //button[@class='_42ft _4jy0 _2kak _4jy4 _4jy1 selected _51sy']
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:29)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:193)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:166)
+	at starter.task.facebook.createNewUser.performAs(createNewUser.java:59)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:197)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:168)
+	at starter.stepdefinitions.FacebookRegister.nombre_apellido(FacebookRegister.java:52)
+	at ?.&quot;ANDRES&quot; nombre ,&quot;MONTOYA&quot; apellido(src/test/resources/features/test/facebookRegister.feature:7)
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.9</a> at 2 mar. 2020 13:12:27</p>
+</div>
+</div>
+</body>
+</html>

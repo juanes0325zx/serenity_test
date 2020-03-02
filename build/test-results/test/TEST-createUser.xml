@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="createUser" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-03-02T18:11:58" hostname="DESKTOP-EM69N16" time="27.064">
+  <properties/>
+  <testcase name="Facebook Register" classname="createUser" time="27.064">
+    <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: //button[@class='_42ft _4jy0 _2kak _4jy4 _4jy1 selected _51sy']" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: an element that is visible
+     but: no matching element found by xpath: //button[@class='_42ft _4jy0 _2kak _4jy4 _4jy1 selected _51sy']
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:300)
+	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:29)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:193)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:166)
+	at starter.task.facebook.createNewUser.performAs(createNewUser.java:59)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:232)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:197)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:168)
+	at starter.stepdefinitions.FacebookRegister.nombre_apellido(FacebookRegister.java:52)
+	at ✽.&quot;ANDRES&quot; nombre ,&quot;MONTOYA&quot; apellido(src/test/resources/features/test/facebookRegister.feature:7)
+</failure>
+  </testcase>
+  <system-out><![CDATA[13:11:58.858 [Test worker] INFO  n.t.c.steps.ConsoleLoggingListener - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+TEST STARTED: Facebook Register
+-------------------------------------------------------------------(createuser;facebook-register)
+13:11:59.512 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Instantiating driver
+13:11:59.512 [Test worker] INFO  n.s.c.w.d.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --enable-automation, --test-type], extensions: []}, platform: ANY, version: }
+]]></system-out>
+  <system-err><![CDATA[mar. 02, 2020 1:11:59 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 37569
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1583172720.851][WARNING]: This version of ChromeDriver has not been tested with Chrome version 80.
+[1583172722.854][WARNING]: Timed out connecting to Chrome, retrying...
+mar. 02, 2020 1:12:04 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

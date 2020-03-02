@@ -1,9 +1,14 @@
 Feature: createUser
 
-  Scenario: Facebook Register
-    Given "fernando242@mailboxt.com" usuario nuevo con "*Testcreate898798*"
-    When "fernado" nombre ,"montoya" apellido
-    Then  crear el usurio "3042016808"
+  Scenario Outline: Facebook Register
 
 
+    Given "<email>" usuario nuevo con "<password>"
+    When "<name>" nombre ,"<lastname>" apellido
+    Then  crear el usurio "<phone>"
 
+
+    Examples:
+      | name      | lastname                    | email                  | password         | phone      |
+      | ANDRES | MONTOYA                 | AndresR5445655@mailboxt.com | **fghfg5151_M** | 3042016808 |
+     
