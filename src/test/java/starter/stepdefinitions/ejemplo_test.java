@@ -11,7 +11,7 @@ import starter.model.dashBoard.dashboard;
 import starter.navigation.NavigateTo;
 import starter.model.dashBoard.OverViewData_DashBoard;
 import starter.model.menu.OverViewData_menu;
-import starter.task.Builder.login_Builder_patron;
+import starter.task.ExamplePatrons.Builder.login_Builder_patron;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;

@@ -3,9 +3,7 @@ package starter.navigation;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
-import starter.navigation.pages.facebook;
-import starter.navigation.pages.test_page;
-import starter.navigation.pages.test_page2;
+import starter.navigation.pages.*;
 
 public class NavigateTo {
 
@@ -22,8 +20,21 @@ public class NavigateTo {
     }
 
     public static Performable FacebbokHome() {
-        return Task.where("{0} ejemplo test facebook home",
-                Open.browserOn().the(facebook.class)
+        return Task.where ("{0}  test facebook home",
+                Open.browserOn ().the (facebook.class)
         );
     }
+
+
+    public static Performable FacebookPublication() {
+        return Task.where ("{0}  test facebook home",
+                Open.browserOn ().the (publicion_facebook.class)
+        );
+    }
+    public static Performable Mailboxt() {
+        return Task.where("{0} login mail ",
+                Open.browserOn().the(mailboxt.class)
+        );
+    }
+
 }

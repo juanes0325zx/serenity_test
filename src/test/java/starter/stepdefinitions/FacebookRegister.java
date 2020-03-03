@@ -4,20 +4,17 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.serenitybdd.screenplay.ensure.Ensure;
-import starter.model.dashBoard.OverViewData_DashBoard;
-import starter.model.dashBoard.dashboard;
-import starter.model.menu.OverViewData_menu;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+import starter.model.facebook_publiction.facebook_register;
 import starter.navigation.NavigateTo;
-import starter.task.Builder.login_Builder_patron;
 import starter.task.facebook.createNewUser;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static org.hamcrest.core.IsEqual.equalTo;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class FacebookRegister {
 
@@ -26,6 +23,20 @@ String pass;
 String name;
 String lastname;
 String phone;
+
+
+/*
+    Given "<email>" usuario nuevo con "<password>"
+    When "<name>" nombre ,"<lastname>" apellido
+    Then  crear el usurio "<phone>"
+
+
+    Examples:
+      | name      | lastname                    | email                  | password         | phone      |
+      | Calos Andres | Montoya  Garcia               | AndresMyGa464565@mailboxt.com | **fghfg5151_M** | 3042016808 |
+
+
+ */
 
     @Before
     public void setTheStage() {
@@ -61,7 +72,9 @@ String phone;
     public void crear_el_usurio(String phone) {
         this.phone=phone;
         theActorCalled(mail).attemptsTo(
-
+                WaitUntil.the (facebook_register.chk_captcha, isVisible ()).forNoMoreThan (10).seconds (),
+                Click.on(facebook_register.chk_captcha),
+                Click.on(facebook_register.btn_captcha_continue)
 
         );
     }
