@@ -9,10 +9,12 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import starter.model.facebook_publiction.facebook_register;
+import starter.model.facebook_publiction.toolbar_facebook_publication;
 import starter.navigation.NavigateTo;
 import starter.task.facebook.LoginAndLikePublication;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class FacebookLoginAndLike {
@@ -39,7 +41,8 @@ String url;
                         .with ()
                         .mailLogin (this.email)
                         .passLogin (this.pass)
-                        .sendData (false)
+                        .sendData (false),
+                NavigateTo.FacebookPublication ()
         );
 
 
@@ -48,9 +51,7 @@ String url;
     @When("{string} publicacion a darle like")
     public void publicacion_a_darle_like(String url) {
       this.url =url;
-
         theActorCalled(this.email).attemptsTo(
-                NavigateTo.FacebookPublication (),
                 LoginAndLikePublication
                         .with ()
                         .urlLogin (this.url)

@@ -9,7 +9,10 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import starter.model.facebook_publiction.facebook_login_logout;
 import starter.model.facebook_publiction.facebook_register;
 import starter.model.facebook_publiction.toolbar_facebook_publication;
+import sun.awt.windows.ThemeReader;
 
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class LoginAndLikePublication implements Task {
@@ -18,6 +21,7 @@ public class LoginAndLikePublication implements Task {
     private String pass;
     private String url;
     private boolean value;
+    private int num;
 
     public LoginAndLikePublication(String email, String pass, String url, boolean value){
         this.email =email;
@@ -32,22 +36,37 @@ public class LoginAndLikePublication implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        if (value==false) {
         actor.attemptsTo (
                 WaitUntil.the (facebook_login_logout.txt_user_login, isVisible ()).forNoMoreThan (10).seconds (),
                 Enter.keyValues (email).into (facebook_login_logout.txt_user_login),
                 WaitUntil.the (facebook_login_logout.txt_user_pass, isVisible ()).forNoMoreThan (10).seconds (),
                 Enter.keyValues (pass).into (facebook_login_logout.txt_user_pass),
-                Click.on (facebook_login_logout.btn_login)
+                Click.on (facebook_login_logout.btn_login),
+                WaitUntil.the (facebook_login_logout.btn_menu_acount, isVisible ()).forNoMoreThan (20).seconds ()
 
-        );
+
+        );}
         if (value) {
+
             actor.attemptsTo (
-                    WaitUntil.the (toolbar_facebook_publication.like_btn, isVisible ()).forNoMoreThan (10).seconds (),
+                    WaitUntil.the (toolbar_facebook_publication.like_btn, isVisible ()).forNoMoreThan (5).seconds (),
                     Click.on (toolbar_facebook_publication.like_btn)
-            );
+                     //,
+                       // WaitUntil.the (facebook_login_logout.btn_menu_acount, isVisible ()).forNoMoreThan (10).seconds (),
+                       // Click.on (facebook_login_logout.btn_menu_acount),
+                       // WaitUntil.the (facebook_login_logout.btn_logOut, isVisible ()).forNoMoreThan (10).seconds (),
+                       // Click.on (facebook_login_logout.btn_logOut)
+                );
+
         }
 
     }
+
+
+
+
+
 public static class LoginAndLike{
     private  String email;
     private String pass;
